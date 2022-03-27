@@ -15,13 +15,13 @@
       <div class='navbar'>
         <div class='logo'>
           <a href='/'>
-            <img src='/logo 1.png' width='175px' />
+            <img src='/logo 1.png' width='175px'/>
           </a>
         </div>
         <nav>
           <ul id='Menuitems'>
             <li><a href='/'>Home</a></li>
-            {{! <li><a href='/services'>Services</a></li> }}
+            {{!-- <li><a href='/services'>Services</a></li> --}}
             <li><a href=''>About</a></li>
             <li><a href='/account'>Account</a></li>
           </ul>
@@ -34,30 +34,32 @@
         <div class='row'>
           <div class='col-2'>
             {{#if message}}
-              <h2
-                class='alert alert-danger mt-4'
-                align='center'
-              >{{message}}</h2>
-            {{/if}}
-            <img src='/5112782.jpg' width='100%' />
+      <h2 class='alert alert-danger mt-4' align='center'>{{message}}</h2>
+    {{/if}}
+            <img src='/5112782.jpg' width='100%'  />
           </div>
-
           <div class='col-2'>
             <div class='form-container'>
 
-              <div class='form-btn'>
-                <span onclick='login1()'><a href='/login1'><div
-                      class='col-7'
-                    ><h2 class='heading'>Login</h2></div></a>
+              <div class='form-btn' >
+                <span onclick='login1()'><a href='/login1'><div class="col-7"><h2 class='heading'>Login</h2></div></a>
                 </span>
-                <span onclick='register1()'><a href='/register1'><div
-                      class='col-7'
-                    ><h2 class='heading'>Register</h2></div></a></span>
-
+                <span onclick='register1()'><a
+                    href='/register1'
+                  ><div class="col-7"><h2 class='heading' >Register</h2></div></a></span>
+                
               </div>
 
-              <form id='logForm' action='/auth/login1' method='POST'>
-                <h3 class='heading'>LOGIN</h3>
+              <form id='RegForm' action='/auth/register1' method='POST'>
+              <div class="col-7"><h3 class='heading'>REGISTER</h3></div>
+              
+                <input
+                  type='text'
+                  placeholder='username'
+                  class='form-control'
+                  id='username'
+                  name='username'
+                />
                 <input
                   type='email'
                   placeholder='email'
@@ -72,15 +74,20 @@
                   id='password'
                   name='password'
                 />
-                <button type='submit' class='btn btn-primary'>Login</button>
-
+                <input
+                  type='password'
+                  placeholder='passwordConfirm'
+                  class='form-control'
+                  id='passwordConfirm'
+                  name='passwordConfirm'
+                />
+                <button type='submit' class='btn btn-primary'>Register</a></button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class='footer'>
       <div class='container'>
         <div class='row'>

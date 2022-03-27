@@ -33,48 +33,19 @@
       <div class='container'>
         <div class='row'>
           <div class='col-2'>
-            {{#if message}}
-              <h2
-                class='alert alert-danger mt-4'
-                align='center'
-              >{{message}}</h2>
-            {{/if}}
             <img src='/5112782.jpg' width='100%' />
           </div>
-
           <div class='col-2'>
-            <div class='form-container'>
-
+            <div class='form-container1'>
               <div class='form-btn'>
-                <span onclick='login1()'><a href='/login1'><div
-                      class='col-7'
-                    ><h2 class='heading'>Login</h2></div></a>
-                </span>
-                <span onclick='register1()'><a href='/register1'><div
-                      class='col-7'
-                    ><h2 class='heading'>Register</h2></div></a></span>
+                <nav>
+                  <ul>
+                    <li><a href='/login1' class='btn'> Login </a></li>
+                    <li><a href='/register1' class='btn'> Register </a></li>
+                  </ul>
+                </nav>
 
               </div>
-
-              <form id='logForm' action='/auth/login1' method='POST'>
-                <h3 class='heading'>LOGIN</h3>
-                <input
-                  type='email'
-                  placeholder='email'
-                  class='form-control'
-                  id='email'
-                  name='email'
-                />
-                <input
-                  type='password'
-                  placeholder='password'
-                  class='form-control'
-                  id='password'
-                  name='password'
-                />
-                <button type='submit' class='btn btn-primary'>Login</button>
-
-              </form>
             </div>
           </div>
         </div>
